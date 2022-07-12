@@ -81,6 +81,9 @@ menu:
 	scatter:			S&catter Plot	4
 	scatter pie:		Sc&atter-Pie	5
 	
+	console:			Console
+	clear console:		&Clear Console	Ctrl+L
+
 	window:			&Window
 	new window:			&New Window
 	cards tab:			&Cards	Alt+1
@@ -197,6 +200,9 @@ help:
 	scatter:			A scatter plot, the size indicates the number of cards
 	scatter pie:		A scatter plot where each item is a small pie graph
 	
+	#console:
+	clear console:		Clear the console
+
 	#window:
 	new window:			Creates another window to edit the same set
 	cards tab:			Edit the cards in the set
@@ -212,6 +218,10 @@ help:
 	website:			
 	about:				
 	
+	# New Set Window
+	search game list control: Filter the game list. Use - to exclude games. Use field: to search in a specific field. Use quotes for literal search. Separate multiple queries with a space.
+	search stylesheet list control: Filter the stylesheet list. Use - to exclude styles. Use field: to search in a specific field. Use quotes for literal search. Separate multiple queries with a space.
+
 	# Cards panel
 	collapse notes:		Hide the card notes box
 	expand notes:		Show the card notes box
@@ -229,8 +239,7 @@ help:
 	app language:
 		Note: You must restart MSE for the changes to take effect.
 	zoom export:
-		(When off, the cards are exported
-		 and copied at 100% size and normal rotation)
+		(When off, the cards are exported at normal rotation)
 	
 	# apprentice export
 	set code:			A set code is a two character code that is used by Apprentice to refer to a set.
@@ -348,6 +357,8 @@ tool:
 	free point:			Free
 	smooth point:		Smooth
 	symmetric point:	Symmetric
+
+	clear console:		Clear Console
 	
 ############################################################## Toolbar help text
 tooltip:
@@ -424,6 +435,8 @@ tooltip:
 	smooth point:		Make point smooth
 	symmetric point:	Make point symmetric
 
+	clear console:		Clear Console
+
 ############################################################## Labels in the GUI
 label:
 	# Cards tab
@@ -461,21 +474,30 @@ label:
 	# New set window
 	game type:			&Game type:
 	style type:			&Card style:
+	search game list:   Filter Games
+	search stylesheet list: Filter Stylesheets
 	
 	stylesheet not found:
 		The set you are trying to open uses the stylesheet "%s".
 		This stylesheet is not found on your system, please select an alternative.
-	
+
 	# Preferences
 	language:			Language
 	windows:			Open sets
 	app language:		Language of the user interface:
 	card display:		Card Display
+	storage: 			Storage
 	zoom:				&Zoom:
+	export: 			&Export:
+	scale: 				&Internal Scale:
 	percent of normal:	% of normal size
 	external programs:	External programs
 	apprentice:			&Apprentice:
 	apprentice exe:		Apprentice Executable
+	internal scale desc:
+		Scale to internally store card images at.
+		Changing this may impact how Sharpening looks.
+		Does not retroactively apply to existing images.
 	check at startup:	Check for new versions at startup
 	checking requires internet:
 		Checking for updates requires an internet connection.
@@ -506,6 +528,8 @@ label:
 	# Image slicer
 	original:			Original:
 	result:				Result:
+	original with dimensions: Original (%s x %s):
+	result with dimensions:	Result (%s x %s):
 	size:				Size
 	original size:			&Original Size
 	size to fit:			Size to &Fit
@@ -516,6 +540,7 @@ label:
 	selection top:			&Top
 	selection width:		&Width
 	selection height:		&Height
+	selection center:       Recenter
 	#zoom:				Zoom
 	fix aspect ratio:		Fix aspect ratio (width/height)
 	zoom amount:			Zoom
@@ -575,6 +600,7 @@ button:
 	
 	# Console panel
 	evaluate:			&Evaluate
+	clear:				&Clear
 	
 	# Welcome
 	new set:			New set
@@ -589,12 +615,13 @@ button:
 	high quality:		&High quality rendering
 	show lines:			Show &lines around fields
 	show editing hints:	Show boxes and hints for &editing
-	zoom export:		Use zoom and rotation settings when e&xporting
+	zoom export:		Use Viewer rotation settings when e&xporting
 	spellcheck enabled:	Show &spelling errors on cards
 	check now:			Check &Now
 	always:							Always
 	if internet connection exists:	If internet connection exists
 	never:							Never
+	internal image extension: Store images internally with file extension
 	
 	# Column select
 	move up:			Move &Up
@@ -657,6 +684,7 @@ title:
 	global:					Global
 	display:				Display
 	directories:			Directories
+	internal:               Internal
 	updates:				Updates
 	update check:			Update Check
 	locate apprentice:		Locate Apprentice
